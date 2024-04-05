@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2024-CPP-201\pointer\배열과 포인터와 함수.cpp">
+    <ClCompile Include="2024-CPP-201\02-03 문자열 대입.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
