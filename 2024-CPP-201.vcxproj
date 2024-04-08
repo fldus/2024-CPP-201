@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2024-CPP-201\02-04 문자열 추가.cpp" />
+    <ClCompile Include="2024-CPP-201\02-05 문자열 비교.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
