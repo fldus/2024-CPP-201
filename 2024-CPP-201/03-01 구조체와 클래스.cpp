@@ -8,6 +8,8 @@ public:
 	Student(int hakbun, string name)
 		: hakbun_(hakbun), name_(name)
 	{
+		// this: 객체 자기자신을 가리키는 포인터
+		this->hakbun_ = hakbun;
 	}
 	Student()	// 생성자 오버로딩
 		: hakbun_(2121), name_("JWP")
