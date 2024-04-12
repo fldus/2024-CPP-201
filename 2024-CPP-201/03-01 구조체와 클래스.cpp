@@ -5,13 +5,14 @@ using namespace std;
 // 클래스는 디폴트가 private
 class Student {
 public:
-	Student(int hakbun, string name){	// 생성자
-		hakbun_ = hakbun;
-		name_ = name;
+	Student(int hakbun, string name)	// 생성자
+		: hakbun_(hakbun), name_(name)
+	{	
+		cout << "학번이 등록되었습니다." << endl;
 	}
-	Student() {	// 생성자 오버로딩
-		hakbun_ = 2121;
-		name_ = "JWP";
+	Student()	// 생성자 오버로딩
+		: hakbun_(2121), name_("JWP")
+	{
 	}
 
 	// 객체의 멤버를 출력하는 함수
