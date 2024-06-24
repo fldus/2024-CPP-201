@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "2024-CPP-201", "2024-CPP-201.vcxproj", "{00E28D6F-0EEE-42B7-848D-0A73CF055444}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BricksGame", "..\BricksGame\BricksGame.vcxproj", "{416E64B1-9E4A-41DD-8C63-EB17EBCB8F64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{00E28D6F-0EEE-42B7-848D-0A73CF055444}.Release|x64.Build.0 = Release|x64
 		{00E28D6F-0EEE-42B7-848D-0A73CF055444}.Release|x86.ActiveCfg = Release|Win32
 		{00E28D6F-0EEE-42B7-848D-0A73CF055444}.Release|x86.Build.0 = Release|Win32
+		{416E64B1-9E4A-41DD-8C63-EB17EBCB8F64}.Debug|x64.ActiveCfg = Debug|x64
+		{416E64B1-9E4A-41DD-8C63-EB17EBCB8F64}.Debug|x64.Build.0 = Debug|x64
+		{416E64B1-9E4A-41DD-8C63-EB17EBCB8F64}.Debug|x86.ActiveCfg = Debug|Win32
+		{416E64B1-9E4A-41DD-8C63-EB17EBCB8F64}.Debug|x86.Build.0 = Debug|Win32
+		{416E64B1-9E4A-41DD-8C63-EB17EBCB8F64}.Release|x64.ActiveCfg = Release|x64
+		{416E64B1-9E4A-41DD-8C63-EB17EBCB8F64}.Release|x64.Build.0 = Release|x64
+		{416E64B1-9E4A-41DD-8C63-EB17EBCB8F64}.Release|x86.ActiveCfg = Release|Win32
+		{416E64B1-9E4A-41DD-8C63-EB17EBCB8F64}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
