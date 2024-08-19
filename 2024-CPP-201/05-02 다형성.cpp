@@ -38,6 +38,8 @@ public:
 	{
 		cout << "인권존재여부" << right_ << endl;
 	}
+
+	// TODO : 정적바인딩을 동적바인딩으로 고치기
 	void bark()
 	{
 		cout << "톡톡" << endl;
@@ -61,12 +63,14 @@ void main(void)
 	ani->bark();
 	ani->sleep();
 	ani->eat();
+	delete ani;
 	
-	Human* hum = new Human("hum", 18, true);
-	hum->bark();
-	hum->sleep();
-	hum->eat();
+	// ani의 자료형은 Animal*
+	ani = new Human("hum", 18, true);
+	// 정적바인딩으로 인해 Animal의 멤버함수가 호출됨
+	ani->bark();
+	ani->sleep();
+	ani->eat();
 
-	delete hum;
 	delete ani;
 }
