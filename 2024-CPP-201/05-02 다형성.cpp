@@ -10,17 +10,17 @@ public:
 		cout << "이름 " << name_ << endl;
 		cout << "나이 " << age_ << endl;
 	}
-	void bark()
+	virtual void bark()
 	{
 		cout << "잘 짖는다" << endl;
 	}
 
-	void sleep()
+	virtual void sleep()
 	{
 		cout << "잘 잔다" << endl;
 	}
 
-	void eat()
+	virtual void eat()
 	{
 		cout << "잘 먹는다" << endl;
 	}
