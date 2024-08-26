@@ -10,6 +10,10 @@ public:
 		cout << "이름 " << name_ << endl;
 		cout << "나이 " << age_ << endl;
 	}
+	virtual ~Animal() {
+		cout << "Animal 소멸자" << endl;
+	}
+
 	virtual void bark()
 	{
 		cout << "잘 짖는다" << endl;
@@ -37,6 +41,10 @@ public:
 		: Animal(name, age), right_(right)
 	{
 		cout << "인권존재여부" << right_ << endl;
+	}
+	virtual ~Human()
+	{
+		cout << "Human 소멸자" << endl;
 	}
 
 	// TODO : 정적바인딩을 동적바인딩으로 고치기
