@@ -13,21 +13,10 @@ public:
 	virtual ~Animal() {
 		cout << "Animal 소멸자" << endl;
 	}
-
-	virtual void bark()
-	{
-		cout << "잘 짖는다" << endl;
-	}
-
-	virtual void sleep()
-	{
-		cout << "잘 잔다" << endl;
-	}
-
-	virtual void eat()
-	{
-		cout << "잘 먹는다" << endl;
-	}
+	// 실체가 없으므로 순수가상함수로 처리(자식 클래스에서 구현해야함)
+	virtual void bark() = 0;
+	virtual void sleep() = 0;
+	virtual void eat() = 0;
 
 private:
 	string name_;
@@ -67,6 +56,7 @@ private:
 };
 void main(void)
 {
+	// (순수가상함수가 있는)추상클래스는 객체를 생성할 수 없다
 	Animal* ani = new Animal("ani", 18);
 	ani->bark();
 	ani->sleep();
@@ -79,6 +69,5 @@ void main(void)
 	ani->bark();
 	ani->sleep();
 	ani->eat();
-
 	delete ani;
 }
