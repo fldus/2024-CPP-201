@@ -58,8 +58,8 @@ void main(void)
 {
 	// (순수가상함수가 있는)추상클래스는 객체를 생성할 수 없다
 	Animal* ani = new Animal("ani", 18);
-	ani->bark();
-	ani->sleep();
+	ani->bark();	ani->sleep();
+
 	ani->eat();
 	delete ani;
 	
