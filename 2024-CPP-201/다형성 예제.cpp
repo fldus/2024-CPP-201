@@ -15,7 +15,10 @@ public:
 		cout << "만드는 시간 : " << making_time_ << endl;
 		cout << "아름다움 : " << beauty_ << endl;
 	}
-private:
+
+	// 순수 가상함수, 자식 클래스에서 구현
+	virtual void attack(Clothes* target) = 0;
+
 	string name_;
 	int price_;	// 가격 (단위 : 만)
 	int making_time_;
@@ -34,7 +37,12 @@ public:
 		cout << "노리개 : " << norigae_ << endl;
 		cout << "저고리 : " << jugori_ << endl;
 	}
-private:
+
+	void attack(Clothes * target)
+	{
+		target->beauty_ -= beauty_;
+	}
+
 	int norigae_;	// 노리개
 	int jugori_;	// 저고리
 };
@@ -50,7 +58,12 @@ public:
 		Clothes::show();
 		cout << "오비 : " << belt_ << endl;
 	}
-private:
+
+	void attack(Clothes* target)
+	{
+		target->beauty_ -= beauty_;
+	}
+
 	int belt_;	// 오비
 };
 
@@ -65,7 +78,12 @@ public:
 		Clothes::show();
 		cout << "자수 : " << embroidery_ << endl;
 	}
-private:
+
+	void attack(Clothes* target)
+	{
+		target->beauty_ -= beauty_;
+	}
+
 	int embroidery_;	// 자수
 };
 
@@ -75,6 +93,12 @@ void main(void) {
 	
 	player->show();
 	friends->show();
+
+	cout << "----------------------------------" << endl;
+	cout << "1. 공격" << endl;
+	cout << "2. 특수공격1" << endl;
+	cout << "3. 특수공격2" << endl;
+	cout << "4. 도망" << endl;
 
 	delete friends;
 	delete player;
