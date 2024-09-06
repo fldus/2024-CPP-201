@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 
 class Clothes {
@@ -90,15 +91,42 @@ public:
 void main(void) {
 	Clothes* player = new Hanbok("곤룡포", 100, 10, 100, 0, 0);
 	Clothes* friends = new Kimono("나마에와", 10, 10, 90, 1);
-	
-	player->show();
-	friends->show();
 
-	cout << "----------------------------------" << endl;
-	cout << "1. 공격" << endl;
-	cout << "2. 특수공격1" << endl;
-	cout << "3. 특수공격2" << endl;
-	cout << "4. 도망" << endl;
+	int choice;
+
+	while(true)
+	{
+		system("cls");
+
+		player->show();
+		cout << endl << endl;
+		friends->show();
+
+		cout << "----------------------------------" << endl;
+		cout << "1. 공격" << endl;
+		cout << "2. 특수공격1" << endl;
+		cout << "3. 특수공격2" << endl;
+		cout << "4. 도망" << endl;
+		cin >> choice;
+
+		switch (choice) {
+		case 1:
+			player->attack(friends);
+			break;
+		case 2:
+			cout << "특수 공격1" << endl;
+			break;
+		case 3:
+			cout << "특수 공격2" << endl;
+			break;
+		case 4:
+			cout << "도망" << endl;
+			break;
+		default:
+			break;
+		}
+
+	}
 
 	delete friends;
 	delete player;
