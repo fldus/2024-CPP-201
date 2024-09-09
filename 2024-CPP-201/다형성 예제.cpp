@@ -30,7 +30,9 @@ class Hanbok : public Clothes {
 public:
 	Hanbok(string name, int price, int making_time, int beauty, int norigae, int jugori)
 		: Clothes(name, price, making_time, beauty), norigae_(norigae), jugori_(jugori)
-	{}
+	{
+		cnt = 0;
+	}
 
 	void show()
 	{
@@ -39,13 +41,19 @@ public:
 		cout << "저고리 : " << jugori_ << endl;
 	}
 
-	void attack(Clothes * target)
+	void attack(Clothes * target) override
 	{
-		target->beauty_ -= beauty_;
+		// TODO : 매 3타마다 치명타를 주기
+		if (++cnt == 3) {
+			cnt = 0;
+			target->beauty_ -= 10;
+		}
+		target->beauty_ -= 1;
 	}
 
 	int norigae_;	// 노리개
 	int jugori_;	// 저고리
+	int cnt;
 };
 
 class Kimono : public Clothes {
