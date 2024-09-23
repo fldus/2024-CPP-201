@@ -7,6 +7,9 @@ void main(void)
 {
 	vector<string> cy;
 
+	// 미리 백터의 크기를 지정하는 것이 좋다. (성능 - 속도, 저장 공간)
+	cy.reserve(10);
+
 	// 요소 추가
 	cy.push_back("채연");
 	cy.push_back("해인");
