@@ -5,7 +5,7 @@ using namespace std;
 void main(void)
 {
 	vector<int> arr = {201, 202, 203, 204};
-	for (int i = 0; i < arr.size(); i++)
-		cout << arr[i] << endl;
+	for (int i : arr)
+		cout << i << endl;
 
 }
