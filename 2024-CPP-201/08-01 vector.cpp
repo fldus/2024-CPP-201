@@ -33,7 +33,7 @@ void main(void)
 	cy.pop_back();
 	cout << cy[0] << "의 남자는??" << endl;
 	
-	vector<string>::iterator iter;
-	for (iter = cy.begin(); iter != cy.end(); iter++)
+	// vector<string>::iterator iter;
+	for (auto iter = cy.begin(); iter != cy.end(); iter++)
 		cout << *iter << endl;
 }
