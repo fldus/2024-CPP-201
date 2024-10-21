@@ -26,7 +26,7 @@ void main(void)
 	Text text;
 	text.setFont(font);
 	text.setCharacterSize(50);
-	text.setString("gulim");
+	text.setString(L"굴림");
 	text.setFillColor(Color::Red);
 	text.setPosition(App::WIDTH - text.getGlobalBounds().width - 5, 0.f);
 
